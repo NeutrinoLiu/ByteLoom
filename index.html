@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loom: Weaving Geometry-Consistent Human-Object Interactions</title>
+    <title>ByteLoom: Weaving Geometry-Consistent Human-Object Interactions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,14 +16,22 @@
 
     <div class="container">
         <header>
-            <h1>Loom: Weaving Geometry-Consistent Human-Object Interactions through Progressive Curriculum Learning</h1>
+            <h1>ByteLoom: Weaving Geometry-Consistent Human-Object Interactions through Progressive Curriculum Learning</h1>
+            <h1>
+<a href="https://arxiv.org/abs/1234.56789" target="_blank" style="display: inline-block; margin-right: 100px;">
+    <img src="https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=for-the-badge">
+</a>
+<a href="https://github.com/NeutrinoLiu/byteLoom" target="_blank" style="display: inline-block;">
+    <img src="https://img.shields.io/badge/github-ProjectPage-blue.svg?style=for-the-badge">
+</a>
+            </h1>
             <p>Bangya Liu, Xinyu Gong, Zelin Zhao, Ziyang Song, Yulei Lu, Suhui Wu, Jun Zhang, Suman Banerjee, Hao Zhang</p>
 
             <div class="teaser">
             <img src="figs/teaser.png" alt="Loom Teaser">
             </div>
             <div class="abstract">
-                <p>Human-object interaction (HOI) video generation has garnered increasing attention due to its promising applications in digital humans, e-commerce, advertising, and robotics imitation learning. However, existing methods face two critical limitations: (1) a lack of effective mechanisms to inject multi-view information of the target object into the model, leading to poor cross-view consistency, and (2) heavy reliance on fine-grained hand mesh annotations for modeling interaction occlusions. To address these challenges, we introduce Loom, a Diffusion Transformer (DiT)-based framework that generates realistic HOI videos with geometrically consistent object illustration, using simplified human conditioning and 3D object inputs. We first propose an RCM-cache mechanism that leverages relative coordinate maps as a universal representation to precisely control 6-DoF object transformations. To overcome interaction dataset scarcity and leverage existing public datasets, we design a progressive training curriculum that enhances model capabilities and eliminates hand mesh requirements. Extensive experiments demonstrate that our method faithfully preserves human identity and the object's multi-view geometry, while maintaining smooth motion and outperforming prior approaches in object manipulation fidelity.</p>
+                <p>Human-object interaction (HOI) video generation has garnered increasing attention due to its promising applications in digital humans, e-commerce, advertising, and robotics imitation learning. However, existing methods face two critical limitations: (1) a lack of effective mechanisms to inject multi-view information of the object into the model, leading to poor cross-view consistency, and (2) heavy reliance on fine-grained hand mesh annotations for modeling interaction occlusions. To address these challenges, we introduce ByteLoom, a Diffusion Transformer (DiT)-based framework that generates realistic HOI videos with geometrically consistent object illustration, using simplified human conditioning and 3D object inputs. We first propose an RCM-cache mechanism that leverages Relative Coordinate Maps (RCM) as a universal representation to maintain object's geometry consistency and precisely control 6-DoF object transformations in the meantime. To compensate HOI dataset scarcity and leverage existing datasets, we further design a training curriculum that enhances model capabilities in a progressive style and relaxes the demand of hand mesh. Extensive experiments demonstrate that our method faithfully preserves human identity and the object's multi-view geometry, while maintaining smooth motion and object manipulation.</p>
             </div>
         </header>
 
@@ -92,7 +100,7 @@ Object 6DoF pose: Extract metric depth using MoGe2 with camera intrinsics from E
         <!-- Comparison: Ablation Study -->
         <div class="section video-section" data-order="3" data-section-type="comparison" id="section-ablation">
             <div class="section-header">
-                <h2>Comparison: Ablation Study </h2>
+                <h2>Comparison: Data Ablation Study </h2>
                 <h3>(P-PoseOnly, H-HandObject, O-ObjectOnly, F-Finetune)</h3>
                 <button class="pause-all-btn" onclick="togglePauseAll('section-ablation')">Pause All</button>
             </div>
@@ -146,10 +154,6 @@ Object 6DoF pose: Extract metric depth using MoGe2 with camera intrinsics from E
             </div>
             <div class="gallery" id="demo-nvs"></div>
         </div>
-
-
-
-
     </div>
 
     <script src="script.js"></script>
